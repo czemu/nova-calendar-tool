@@ -7,6 +7,8 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Czemu\NovaCalendarTool\Http\Middleware\Authorize;
+use Czemu\NovaCalendarTool\Models\Event;
+use Czemu\NovaCalendarTool\Observers\EventObserver;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -20,10 +22,6 @@ class ToolServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-calendar-tool');
 
         $this->publishes([
-            __DIR__ . '/../config/nova-calendar.php' => config_path('nova-calendar.php'),
-        ], 'config');
-
-        $this->publishes([
             __DIR__ . '/../database/migrations/create_events_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_events_table.php'),
         ], 'migrations');
 
@@ -32,7 +30,10 @@ class ToolServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            //
+            if ( ! is_null(config('google-calendar.calendar_id')))
+            {
+                Event::observe(EventObserver::class);
+            }
         });
     }
 

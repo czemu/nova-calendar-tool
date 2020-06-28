@@ -12,7 +12,7 @@
                     <heading v-if="currentEvent" :level="2" class="mb-6">{{ __('Edit Event') }}</heading>
                     <div class="border-b border-40 pb-4">
                         <label for="title" class="mb-2 text-80 leading-tight">Title:</label>
-                        <input v-model="title" name="title" class="w-full form-control form-input form-input-bordered">
+                        <input v-model="title" name="title" class="w-full form-control form-input form-input-bordered" />
                     </div>
                     <div class="border-b border-40 py-4">
                         <label for="start" class="mb-2 text-80 leading-tight">Start:</label>

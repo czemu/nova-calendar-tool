@@ -1,13 +1,14 @@
 {
     "name": "czemu/nova-calendar-tool",
-    "description": "A Laravel Nova tool.",
+    "description": "Calendar tool for Laravel Nova.",
     "keywords": [
         "laravel",
         "nova"
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "spatie/laravel-google-calendar": "^2.6"
     },
     "autoload": {
         "psr-4": {
