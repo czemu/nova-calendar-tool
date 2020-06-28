@@ -23,7 +23,7 @@ class Event extends Model
                 $rules = [
                     'title' => 'required',
                     'start' => 'required|date',
-                    'end' => 'required|date'
+                    'end' => 'required|date|after_or_equal:start'
                 ];
 
                 break;
