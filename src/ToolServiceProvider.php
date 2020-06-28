@@ -19,6 +19,14 @@ class ToolServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-calendar-tool');
 
+        $this->publishes([
+            __DIR__ . '/../config/nova-calendar.php' => config_path('nova-calendar.php'),
+        ], 'config');
+
+        $this->publishes([
+            __DIR__ . '/../database/migrations/create_events_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_events_table.php'),
+        ], 'migrations');
+
         $this->app->booted(function () {
             $this->routes();
         });
@@ -41,6 +49,7 @@ class ToolServiceProvider extends ServiceProvider
 
         Route::middleware(['nova', Authorize::class])
                 ->prefix('nova-vendor/nova-calendar-tool')
+                ->namespace('Czemu\NovaCalendarTool\Http\Controllers')
                 ->group(__DIR__.'/../routes/api.php');
     }
 

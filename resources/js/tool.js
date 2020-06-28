@@ -5,5 +5,5 @@ Nova.booting((Vue, router, store) => {
       path: '/nova-calendar-tool',
       component: require('./components/Tool'),
     },
-  ])
+  ]);
 })
