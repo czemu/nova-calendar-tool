@@ -15,7 +15,7 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('google_calendar_id');
+            $table->string('google_calendar_id')->nullable();
             $table->string('title');
             $table->timestamp('start')->nullable();
             $table->timestamp('end')->nullable();
