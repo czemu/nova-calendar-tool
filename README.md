@@ -1,6 +1,6 @@
 # Laravel Nova Calendar Tool
 
-This a tool for [Laravel Nova](https://nova.laravel.com/) which allows you to create, update and delete events on the calendar. It also has a Google Calendar integration.
+This is a package for [Laravel Nova](https://nova.laravel.com/) which allows you to create, update and delete events on the calendar. It also has a Google Calendar integration.
 
 ## Screeenshots
 
@@ -10,7 +10,7 @@ This a tool for [Laravel Nova](https://nova.laravel.com/) which allows you to cr
 ## Requirements
 
 * PHP >= 7.1
-* [Laravel](https://laravel.com/) application with [Laravel Nova](https://nova.laravel.com/) installed.
+* [Laravel](https://laravel.com/) application with [Laravel Nova](https://nova.laravel.com/) installed
 
 ## Instalation
 
@@ -43,11 +43,6 @@ public function tools()
         new \Czemu\NovaCalendarTool\NovaCalendarTool,
     ];
 }
-```
-
-If something doesn't work properly, please try:
-```
-php artisan optimize:clear
 ```
 
 ## Google Calendar Integration
