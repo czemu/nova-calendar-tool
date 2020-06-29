@@ -12,7 +12,7 @@ This is a package for [Laravel Nova](https://nova.laravel.com/) which allows you
 * PHP >= 7.1
 * [Laravel](https://laravel.com/) application with [Laravel Nova](https://nova.laravel.com/) installed
 
-## Instalation
+## Installation
 
 Install the package via composer:
 
@@ -78,7 +78,7 @@ So next, you have to insert `GOOGLE_CALENDAR_ID=your_id` into the `.env` file (i
 
 * [FullCalendar](https://fullcalendar.io/)
 * [Laravel](https://laravel.com/)
-* [Laravel Nova](https://laravel.com/)
+* [Laravel Nova](https://nova.laravel.com/)
 * [spatie/laravel-google-calendar](https://github.com/spatie/laravel-google-calendar)
 
 ## License
