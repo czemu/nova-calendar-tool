@@ -3,9 +3,17 @@
     "description": "Calendar tool for Laravel Nova.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "calendar"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Dymek",
+            "email": "pawel.dymek@gmail.com",
+            "homepage": "https://paweldymek.com/"
+        }
+    ],
     "require": {
         "php": ">=7.1.0",
         "spatie/laravel-google-calendar": "^2.6"
