@@ -17,8 +17,6 @@ class EventObserver
     {
         $googleEvent = GoogleEvent::create([
             'name' => $event->title,
-            // 'startDateTime' => Carbon::create($event->start),
-            // 'endDateTime' => Carbon::create($event->end),
             'startDateTime' => $event->start,
             'endDateTime' => $event->end
         ]);
