@@ -52,6 +52,11 @@ class ToolServiceProvider extends ServiceProvider
                 ->prefix('nova-vendor/nova-calendar-tool')
                 ->namespace('Czemu\NovaCalendarTool\Http\Controllers')
                 ->group(__DIR__.'/../routes/api.php');
+
+        $this->commands([
+            \Czemu\NovaCalendarTool\Console\Commands\ImportEvents::class,
+            \Czemu\NovaCalendarTool\Console\Commands\ExportEvents::class
+        ]);
     }
 
     /**

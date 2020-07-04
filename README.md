@@ -4,8 +4,9 @@ This is a package for [Laravel Nova](https://nova.laravel.com/) which allows you
 
 ## Screeenshots
 
-![Screenshot](https://paweldymek.com/projects/nova-calendar-tool/screen_1.png)
-![Screenshot](https://paweldymek.com/projects/nova-calendar-tool/screen_2.png)
+![Nova Calendar Tool - screen 1](https://paweldymek.com/projects/nova-calendar-tool/screen_1.png)
+![Nova Calendar Tool - screen 2](https://paweldymek.com/projects/nova-calendar-tool/screen_2.png)
+![Nova Calendar Tool - screen 3](https://paweldymek.com/projects/nova-calendar-tool/screen_3.png)
 
 ## Requirements
 
@@ -72,7 +73,17 @@ return [
 ];
 ```
 
-So next, you have to insert `GOOGLE_CALENDAR_ID=your_id` into the `.env` file (it's in the Google Calendar settings page) and the account credentials into the `app/google-calendar/service-account-credentials.json` file (you can obtain it from Google API Console). Both of these things are explained [here](https://github.com/spatie/laravel-google-calendar#installation).
+So next, you have to insert `GOOGLE_CALENDAR_ID=your_id` into the `.env` file (it's in the Google Calendar settings page) and the account credentials into the `storage/app/google-calendar/service-account-credentials.json` file (you can obtain it from Google API Console). Both of these things are explained [here](https://github.com/spatie/laravel-google-calendar#installation).
+
+## Artisan Commands
+
+### Export all events to Google Calendar
+
+```php artisan nova-calendar:export```
+
+### Import all events from Google Calendar
+
+```php artisan nova-calendar:import```
 
 ## Credits
 
