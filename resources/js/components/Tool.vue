@@ -40,8 +40,10 @@
                     eventTimeFormat: {
                         hour: '2-digit',
                         minute: '2-digit',
-                        meridiem: false
-                    }
+                        second: '2-digit',
+                        hour12: false
+                    },
+                    timeFormat: 'H(:mm)'
                 },
                 currentEvent: null,
                 currentDate: null,
