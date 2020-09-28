@@ -25,6 +25,10 @@ class ToolServiceProvider extends ServiceProvider
             __DIR__ . '/../database/migrations/create_events_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_events_table.php'),
         ], 'migrations');
 
+        $this->publishes([
+            __DIR__.'/config/nova-calendar-tool.php' => config_path('nova-calendar-tool.php'),
+        ], 'config');
+
         $this->app->booted(function () {
             $this->routes();
         });
@@ -34,6 +38,10 @@ class ToolServiceProvider extends ServiceProvider
             {
                 Event::observe(EventObserver::class);
             }
+
+            Nova::provideToScript([
+                'fullcalendar_locale' => config('nova-calendar-tool.fullcalendar_locale'),
+            ]);
         });
     }
 

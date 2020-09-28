@@ -31,6 +31,11 @@ Run the migration:
 php artisan migrate
 ```
 
+Publish the config (optional):
+```
+php artisan vendor:publish --provider='Czemu\NovaCalendarTool\ToolServiceProvider' --tag="config"
+```
+
 Register the tool in the `tools` method of the `NovaServiceProvider`:
 ```
 // app/Providers/NovaServiceProvider.php
