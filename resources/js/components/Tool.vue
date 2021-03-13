@@ -21,6 +21,7 @@
 <script>
     import FullCalendar from '@fullcalendar/vue';
     import dayGridPlugin from '@fullcalendar/daygrid';
+    import timeGridPlugin from '@fullcalendar/timegrid';
     import interactionPlugin from '@fullcalendar/interaction';
     import allLocales from '@fullcalendar/core/locales-all';
     import EventModal from './EventModal';
@@ -34,11 +35,16 @@
             return {
                 calendarOptions: {
                     events: '/nova-vendor/nova-calendar-tool/events',
-                    plugins: [ dayGridPlugin, interactionPlugin ],
+                    plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin ],
                     initialView: 'dayGridMonth',
                     locale: Nova.config.fullcalendar_locale || 'en',
                     dateClick: this.handleDateClick,
                     eventClick: this.handleEventClick,
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    },
                     eventTimeFormat: {
                         hour: '2-digit',
                         minute: '2-digit',
