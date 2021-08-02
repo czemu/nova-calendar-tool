@@ -10,10 +10,9 @@ class EventsController
     public function index(Request $request)
     {
         $events = Event::filter($request->query())
-            ->get(['id', 'title', 'start', 'end'])
-            ->toJson();
+            ->get(['id', 'title', 'start', 'end']);
 
-        return response($events);
+        return response()->json($events);
     }
 
     public function store(Request $request)
