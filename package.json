@@ -21,6 +21,8 @@
         "@fullcalendar/list": "^5.0.0",
         "@fullcalendar/timegrid": "^5.0.1",
         "@fullcalendar/vue3": "^5.10.0",
+        "@inertiajs/inertia": "^1.0.0",
+        "@inertiajs/inertia-vue3": "^1.0.0",
         "vue": "^3.2.0"
     }
 }
