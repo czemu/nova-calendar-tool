@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
-use Czemu\NovaCalendarTool\Http\Middleware\Authorize;
 use Czemu\NovaCalendarTool\Models\Event;
 use Czemu\NovaCalendarTool\Observers\EventObserver;
 
@@ -56,7 +55,7 @@ class ToolServiceProvider extends ServiceProvider
             return;
         }
 
-        Route::middleware(['nova', Authorize::class])
+        Route::middleware(['nova'])
                 ->prefix('nova-vendor/nova-calendar-tool')
                 ->namespace('Czemu\NovaCalendarTool\Http\Controllers')
                 ->group(__DIR__.'/../routes/api.php');

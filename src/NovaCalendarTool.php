@@ -27,4 +27,15 @@ class NovaCalendarTool extends Tool
     {
         return view('nova-calendar-tool::navigation');
     }
+
+    /**
+     * Authorize a user to access this tool.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return bool
+     */
+    public function authorize(\Illuminate\Http\Request $request)
+    {
+        return true;
+    }
 }
