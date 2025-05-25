@@ -11,14 +11,14 @@ This is a package for [Laravel Nova](https://nova.laravel.com/) which allows you
 ## Requirements
 
 * PHP >= 7.1
-* Laravel application with Laravel Nova ^4.0 installed.
-* This version of the tool supports Vue 3.
+* Laravel application with Laravel Nova ^5.0 installed.
+* This version of the tool supports Vue 3 and uses Nova's Inertia powered pages.
 * Key frontend dependencies such as `vue`, `laravel-mix`, and `@fullcalendar/vue3` have been updated.
 
 ## Version Compatibility
 
-This version of `czemu/nova-calendar-tool` is intended for use with Laravel Nova 4.x and newer.
-If you are using older versions of Laravel Nova (1.x, 2.x, or 3.x), please use a release of this tool prior to version X.Y.Z (replace X.Y.Z with the actual version number that introduces these Nova 4 changes, e.g., v2.0.0 if this is a major update).
+This version of `czemu/nova-calendar-tool` is intended for use with Laravel Nova 5.x and newer.
+If you are using Laravel Nova 4.x or earlier (1.x, 2.x, or 3.x), please use a release of this tool prior to version X.Y.Z (replace X.Y.Z with the actual version number that introduces these Nova 5 changes, e.g., v3.0.0 if this is a major update).
 
 ## Installation
 
@@ -57,6 +57,8 @@ public function tools()
     ];
 }
 ```
+
+After registration, you can access the calendar at `/nova/nova-calendar-tool` within your Nova panel.
 
 ## Google Calendar Integration
 
