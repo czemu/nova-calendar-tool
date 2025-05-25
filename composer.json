@@ -23,14 +23,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Czemu\\NovaCalendarTool\\": "src/"
+            "DoxHunter\\NovaCalendarTool\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Czemu\\NovaCalendarTool\\ToolServiceProvider"
+                "DoxHunter\\NovaCalendarTool\\ToolServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
         }
     },
     "config": {
