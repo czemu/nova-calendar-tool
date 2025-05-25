@@ -1,1 +1,36 @@
 // Nova Tool CSS
+
+.custom-event-title {
+    display: block; // Make each event take its own line
+    padding: 2px 4px;
+    margin-bottom: 3px; // Space between events in the same day
+    background-color: #eef2f7; // A light background
+    border-radius: 3px;
+    font-size: 0.8em;
+    color: #333;
+    border: 1px solid #d0d9e3; // Subtle border
+}
+
+// Optional: Basic Day Cell Styling
+// Note: FullCalendar class names can change; verify with browser inspector if issues arise.
+.fc-daygrid-day-frame {
+  // background-color: #f9fafb; // Slightly different background for the day cell - commented out to avoid potential conflict with existing theme.
+  // border-radius: 4px; // Might interfere with grid lines, use with caution
+  padding: 4px; // Padding inside the day cell to give content some space
+}
+
+// Style for the event itself, to ensure it respects the custom title's block display
+.fc-event {
+    display: block !important; // Override FullCalendar's inline-block for events if custom title is block
+    margin-bottom: 2px; // Consistent margin with custom-event-title
+}
+// Ensure event content background is transparent if custom title has its own
+.fc-event-main {
+    background-color: transparent !important;
+}
+
+// Ensure the event border is handled by the custom title or a general event style
+.fc-daygrid-event {
+    border: none !important; // Remove default FC border if custom-event-title has one
+    background-color: transparent !important; // Ensure background is transparent
+}

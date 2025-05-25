@@ -11,8 +11,6 @@
                 :currentDate="currentDate"
                 @refreshEvents="refreshEvents"
                 @close="closeModal"
-                @confirm="saveEvent"
-                @delete="deleteEvent"
             />
         </transition>
     </div>
@@ -40,6 +38,9 @@
                     locale: Nova.config.fullcalendar_locale || 'en',
                     dateClick: this.handleDateClick,
                     eventClick: this.handleEventClick,
+                    eventContent: function(arg) {
+                        return { html: `<div class="custom-event-title">${arg.event.title}</div>` };
+                    },
                     headerToolbar: {
                         left: 'prev,next today',
                         center: 'title',
