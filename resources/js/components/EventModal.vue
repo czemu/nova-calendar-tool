@@ -2,7 +2,7 @@
     <modal @modal-close="handleClose" classWhitelist="flatpickr-calendar">
         <form
             @submit.prevent="handleSave"
-            slot-scope="props"
+            v-slot="props"
             class="bg-white rounded-lg shadow-lg overflow-hidden"
             style="width: 460px"
         >

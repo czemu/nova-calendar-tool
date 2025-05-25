@@ -11,7 +11,8 @@
     },
     "devDependencies": {
         "cross-env": "^5.0.0",
-        "laravel-mix": "^1.0"
+        "laravel-mix": "^6.0.49",
+        "vue-loader": "^17.0.0"
     },
     "dependencies": {
         "@fullcalendar/core": "^5.0.0",
@@ -19,7 +20,7 @@
         "@fullcalendar/interaction": "^5.0.0",
         "@fullcalendar/list": "^5.0.0",
         "@fullcalendar/timegrid": "^5.0.1",
-        "@fullcalendar/vue": "^5.0.0",
-        "vue": "^2.5.0"
+        "@fullcalendar/vue3": "^5.10.0",
+        "vue": "^3.2.0"
     }
 }
