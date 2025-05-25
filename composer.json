@@ -1,6 +1,6 @@
 {
-    "name": "czemu/nova-calendar-tool",
-    "description": "Calendar tool for Laravel Nova.",
+    "name": "doxhunter/nova-calendar-tool",
+    "description": "Calendar tool for Laravel Nova 5.x (In Development).",
     "keywords": [
         "laravel",
         "nova",
@@ -9,9 +9,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Paweł Dymek",
-            "email": "pawel.dymek@gmail.com",
-            "homepage": "https://paweldymek.com/"
+            "name": "na",
+            "email": "na",
+            "homepage": "na"
         }
     ],
     "require": {
