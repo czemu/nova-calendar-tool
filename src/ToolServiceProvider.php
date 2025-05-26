@@ -60,7 +60,7 @@ class ToolServiceProvider extends ServiceProvider
             ->group(__DIR__.'/../routes/api.php');
 
         Route::middleware(['nova'])
-            ->get('/nova-calendar-tool', \DoxHunter\NovaCalendarTool\Http\Controllers\ToolController::class)
+            ->get('/nova/nova-calendar-tool', \DoxHunter\NovaCalendarTool\Http\Controllers\ToolController::class)
             ->name('nova-calendar-tool');
 
         $this->commands([
