@@ -1,9 +1,9 @@
 <?php
 
-namespace Czemu\NovaCalendarTool\Console\Commands;
+namespace DoxHunter\NovaCalendarTool\Console\Commands;
 
 use Illuminate\Console\Command;
-use Czemu\NovaCalendarTool\Models\Event;
+use DoxHunter\NovaCalendarTool\Models\Event;
 use Spatie\GoogleCalendar\Event as GoogleEvent;
 
 class ExportEvents extends Command

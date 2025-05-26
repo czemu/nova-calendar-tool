@@ -1,8 +1,8 @@
 <?php
 
-namespace Czemu\NovaCalendarTool\Observers;
+namespace DoxHunter\NovaCalendarTool\Observers;
 
-use Czemu\NovaCalendarTool\Models\Event;
+use DoxHunter\NovaCalendarTool\Models\Event;
 use Spatie\GoogleCalendar\Event as GoogleEvent;
 
 class EventObserver
@@ -10,7 +10,7 @@ class EventObserver
     /**
      * Handle the event "created" event.
      *
-     * @param  \Czemu\NovaCalendarTool\Models\Event $event
+     * @param  \DoxHunter\NovaCalendarTool\Models\Event $event
      * @return void
      */
     public function created(Event $event)
@@ -32,7 +32,7 @@ class EventObserver
     /**
      * Handle the event "updated" event.
      *
-     * @param  \Czemu\NovaCalendarTool\Models\Event $event
+     * @param  \DoxHunter\NovaCalendarTool\Models\Event $event
      * @return void
      */
     public function updated(Event $event)
@@ -55,7 +55,7 @@ class EventObserver
     /**
      * Handle the event "deleted" event.
      *
-     * @param  \Czemu\NovaCalendarTool\Models\Event $event
+     * @param  \DoxHunter\NovaCalendarTool\Models\Event $event
      * @return void
      */
     public function deleted(Event $event)
@@ -74,7 +74,7 @@ class EventObserver
     /**
      * Handle the event "restored" event.
      *
-     * @param  \Czemu\NovaCalendarTool\Models\Event $event
+     * @param  \DoxHunter\NovaCalendarTool\Models\Event $event
      * @return void
      */
     public function restored(Event $event)
@@ -85,7 +85,7 @@ class EventObserver
     /**
      * Handle the event "force deleted" event.
      *
-     * @param  \Czemu\NovaCalendarTool\Models\Event $event
+     * @param  \DoxHunter\NovaCalendarTool\Models\Event $event
      * @return void
      */
     public function forceDeleted(Event $event)

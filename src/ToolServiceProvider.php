@@ -1,13 +1,13 @@
 <?php
 
-namespace Czemu\NovaCalendarTool;
+namespace DoxHunter\NovaCalendarTool;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
-use Czemu\NovaCalendarTool\Models\Event;
-use Czemu\NovaCalendarTool\Observers\EventObserver;
+use DoxHunter\NovaCalendarTool\Models\Event;
+use DoxHunter\NovaCalendarTool\Observers\EventObserver;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -57,17 +57,17 @@ class ToolServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
             ->prefix('nova-vendor/nova-calendar-tool')
-            ->namespace('Czemu\NovaCalendarTool\Http\Controllers')
+            ->namespace('DoxHunter\NovaCalendarTool\Http\Controllers')
             ->group(__DIR__.'/../routes/api.php');
 
         Route::middleware(['nova'])
-            ->namespace('Czemu\NovaCalendarTool\Http\Controllers')
+            ->namespace('DoxHunter\NovaCalendarTool\Http\Controllers')
             ->get('/nova-calendar-tool', 'ToolController')
             ->name('nova-calendar-tool');
 
         $this->commands([
-            \Czemu\NovaCalendarTool\Console\Commands\ImportEvents::class,
-            \Czemu\NovaCalendarTool\Console\Commands\ExportEvents::class
+            \DoxHunter\NovaCalendarTool\Console\Commands\ImportEvents::class,
+            \DoxHunter\NovaCalendarTool\Console\Commands\ExportEvents::class
         ]);
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Czemu\NovaCalendarTool\Models;
+namespace DoxHunter\NovaCalendarTool\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
