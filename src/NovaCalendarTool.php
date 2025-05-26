@@ -50,7 +50,8 @@ class NovaCalendarTool extends Tool
     public function menu(Request $request)
     {
         return MenuItem::make('Calendar')
-            ->path('/nova-calendar-tool')
-            ->icon('calendar');
+
+            ->path('/nova-calendar-tool');
+
     }
 }
