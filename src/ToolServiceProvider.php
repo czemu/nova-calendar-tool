@@ -57,12 +57,10 @@ class ToolServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
             ->prefix('nova-vendor/nova-calendar-tool')
-            ->namespace('DoxHunter\NovaCalendarTool\Http\Controllers')
             ->group(__DIR__.'/../routes/api.php');
 
         Route::middleware(['nova'])
-            ->namespace('DoxHunter\NovaCalendarTool\Http\Controllers')
-            ->get('/nova-calendar-tool', 'ToolController')
+            ->get('/nova-calendar-tool', \DoxHunter\NovaCalendarTool\Http\Controllers\ToolController::class)
             ->name('nova-calendar-tool');
 
         $this->commands([
