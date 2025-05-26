@@ -17,7 +17,7 @@ This is a package for [Laravel Nova](https://nova.laravel.com/) which allows you
 
 ## Version Compatibility
 
-This version of `czemu/nova-calendar-tool` is intended for use with Laravel Nova 5.x and newer.
+This version of `doxhunter/nova-calendar-tool` is intended for use with Laravel Nova 5.x and newer.
 If you are using Laravel Nova 4.x or earlier (1.x, 2.x, or 3.x), please use a release of this tool prior to version X.Y.Z (replace X.Y.Z with the actual version number that introduces these Nova 5 changes, e.g., v3.0.0 if this is a major update).
 
 ## Installation
@@ -25,7 +25,7 @@ If you are using Laravel Nova 4.x or earlier (1.x, 2.x, or 3.x), please use a re
 Install the package via composer:
 
 ```
-composer require czemu/nova-calendar-tool
+composer require doxhunter/nova-calendar-tool
 ```
 
 Publish the migration:
