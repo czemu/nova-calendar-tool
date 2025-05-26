@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use DoxHunter\NovaCalendarTool\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/events', 'EventsController@index');
-Route::post('/events/store', 'EventsController@store');
-Route::put('/events/{event_id}/update', 'EventsController@update');
-Route::delete('/events/{event_id}/destroy', 'EventsController@destroy');
+Route::get('/events', [EventsController::class, 'index']);
+Route::post('/events/store', [EventsController::class, 'store']);
+Route::put('/events/{event_id}/update', [EventsController::class, 'update']);
+Route::delete('/events/{event_id}/destroy', [EventsController::class, 'destroy']);
