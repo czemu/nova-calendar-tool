@@ -1,6 +1,6 @@
 <?php
 
-namespace Czemu\NovaCalendarTool\Http\Controllers;
+namespace DoxHunter\NovaCalendarTool\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
