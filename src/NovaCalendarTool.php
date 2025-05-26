@@ -4,6 +4,8 @@ namespace DoxHunter\NovaCalendarTool;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
+use Laravel\Nova\Menu\MenuItem;
+use Illuminate\Http\Request;
 
 class NovaCalendarTool extends Tool
 {
@@ -37,5 +39,17 @@ class NovaCalendarTool extends Tool
     public function authorize(\Illuminate\Http\Request $request)
     {
         return true;
+    }
+
+    /**
+     * Get the menu representation for the tool.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Laravel\Nova\Menu\MenuItem|array
+     */
+    public function menu(Request $request)
+    {
+        return MenuItem::make('Calendar')
+            ->path('/nova-calendar-tool');
     }
 }
